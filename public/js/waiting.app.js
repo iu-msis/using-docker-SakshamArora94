@@ -1,13 +1,15 @@
 var waitingApp = new Vue({
   el: '#patientWaitingApp',
   data: {
-    patients: []
+    patients: {
+
+    }
   },
   methods: {             //collection of methods our application can use
     fetchPatients() {
       fetch('https://randomuser.me/api/')
       .then(response => response.json())    //Once a response has been received from the fetch function, only then will this get executed
-      .then(json => {waitingApp.patients = json});
+      .then(json => {waitingApp.patients = json.results[0]});
 
       // Means the same at this
       // fetch('https://randomuser.me/api/')
