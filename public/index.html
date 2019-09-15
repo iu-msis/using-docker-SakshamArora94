@@ -38,13 +38,13 @@
          </div>
       </header>
       <div class="container content">
-         <div class = "container">
+         <div id = "patientWaitingApp" class = "container">
             <div class="col-lg-4 col-md-3 col-sm-3 col-xs-3 profile_picture">
-               <a href="https://i.pinimg.com/originals/41/ed/47/41ed476e76731bf939f54234f1ca288b.jpg">
-               <img src="img/Batman.jpg" id="batman">
+               <a :href="patients.picture.medium">
+               <img :src="patients.picture.medium" id="batman">
                </a>
                <br>
-               <cite> <a href="https://i.pinimg.com/originals/41/ed/47/41ed476e76731bf939f54234f1ca288b.jpg">Image Source: Pinterest</a>
+               <cite> <a :href="patients.picture.medium">Image Source: Pinterest</a>
                </cite>
             </div>
             <div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 biodata">
@@ -52,7 +52,7 @@
                   Name:<br>Origin:<br>Birthdate<br>Age<br>Email Address
                </p>
                <p class="col-lg-9">
-                  Batman<br>Gotham City<br>30th February, 1965<br>I'm a symbol. I have no age<br><a href="mailto:batman@batmail.com?Subject=Why%20so%20serious?" target="_top">batman@batmail.com</a>
+                  {{patients.name.first}} {{patients.name.last}}<br>{{patients.location.city}}<br>{{patients.dob.date}}<br>{{patients.dob.age}}<br><a href="mailto:batman@batmail.com+?Subject=Why%20so%20serious?" target="_top">{{patients.email}}</a>
                </p>
                <p class ="about_batman">Hi, My name is Batman. I fight crime and beat criminals to a pulp with my bare hands. I prefer breaking their bones and leaving them in agonizing pain for weeks to come rather than granting them a quick painless death. I also love destroying property using my indestructible car which I call, you guessed it, batmobile (How original am I?)
                </p>
@@ -65,7 +65,7 @@
             </div>
          </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="js/waiting.app.js"></script>
    </body>
 </html>
