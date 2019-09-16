@@ -3,7 +3,42 @@ var waitingApp = new Vue({
   data: {
     patients: {
 
+      "gender": "",
+      "name": {
+        "title": "",
+        "first": "",
+        "last": ""
+      },
+      "location": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postcode": ""
+      },
+      "email": "",
+      "dob": {
+        "date": "",
+        "age": "" 
+      },
+      "registered": {
+        "date": "",
+        "age": ""
+      },
+      "phone": "",
+      "cell": "",
+      "id": {
+        "name": "",
+        "value": ""
+      },
+      "picture": {
+        "large": "",
+        "medium": "",
+        "thumbnail": ""
+      },
+      "nat": ""
     }
+ 
+    
   },
   methods: {             //collection of methods our application can use
     fetchPatients() {
