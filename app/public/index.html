@@ -64,7 +64,7 @@
                </p>
             </div>
          </div>
-         <form v-on:submit="fetchPatients">
+         <form @submit.prevent="fetchPatients">
            <button type = "submit" class = "formbutton btn btn primary">Refresh Users </button>
          </form>
       </div>
